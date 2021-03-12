@@ -1,0 +1,6 @@
+from @std/httpserver import connection, Connection, body, send
+
+on connection fn (conn: Connection) {
+  const res = conn.res;
+  res.body('Hello, World!!').send();
+}

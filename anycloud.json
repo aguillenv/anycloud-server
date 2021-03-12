@@ -1,0 +1,37 @@
+{
+    "gcp-eu": [
+        {
+            "region": "europe-west2-a",
+            "vmType": "e2-micro",
+            "credentials": "gcp-alantech"
+        }
+    ],
+    "gcp-us": [
+        {
+            "region": "us-west1-c",
+            "vmType": "e2-medium",
+            "credentials": "gcp-alantech"
+        }
+    ],
+    "aws-eu": [
+        {
+            "region": "eu-west-1",
+            "vmType": "t2.micro",
+            "credentials": "aws-alantech"
+        }
+    ],
+    "azure-eu-dev": [
+        {
+            "vmType": "Standard_B1ls",
+            "region": "westeurope",
+            "credentials": "azure-dev"
+        }
+    ],
+    "azure-eu": [
+        {
+            "vmType": "Standard_B1ls",
+            "region": "westeurope",
+            "credentials": "azure-alantech"
+        }
+    ]
+}
