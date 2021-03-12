@@ -2,7 +2,7 @@
     "test-app-dev": [
         {
             "region": "europe-west2-a",
-            "vmType": "e2-micro",
+            "vmType": "e2-medium",
             "credentials": "gcp-alantech",
             "envFile": "src/assets/.env-dev"
         }
