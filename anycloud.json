@@ -3,8 +3,6 @@
         {
             "region": "europe-west2-a",
             "vmType": "e2-medium",
-            "credentials": "gcp-alantech",
-            "envFile": "src/assets/.env-dev"
-        }
+            "credentials": "gcp-alantech"        }
     ]
 }
