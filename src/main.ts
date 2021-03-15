@@ -1,4 +1,5 @@
 import * as express from "express";
+import { randomBytes } from "crypto";
 
 const port = 8088;
 const app = express();
@@ -15,6 +16,14 @@ app.post("/fibo", (req, res, next) => {
   try {
     const num = fibo(req.body.input);
     res.end(num.toString());
+  } catch (err) {
+    next(err);
+  }
+});
+app.get("/crypto", (req, res, next) => {
+  try {
+    randomBytes(32).toString("hex");
+    res.end("ok");
   } catch (err) {
     next(err);
   }
