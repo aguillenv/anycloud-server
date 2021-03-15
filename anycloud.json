@@ -2,7 +2,7 @@
     "test-app-dev": [
         {
             "region": "europe-west2-a",
-            "vmType": "e2-small",
+            "vmType": "e2-medium",
             "credentials": "gcp-alantech"        }
     ]
 }
