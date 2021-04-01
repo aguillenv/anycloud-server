@@ -3,6 +3,6 @@
         {
             "region": "europe-west2-a",
             "vmType": "e2-medium",
-            "credentials": "gcp-alantech"        }
+            "credentialProfile": "gcp-alantech"        }
     ]
 }
