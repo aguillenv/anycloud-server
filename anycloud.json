@@ -1,8 +1,9 @@
 {
-    "test-app-dev": [
-        {
-            "region": "europe-west2-a",
-            "vmType": "e2-medium",
-            "credentialProfile": "gcp-alantech"        }
-    ]
+  "local": [
+    {
+      "credentialsName": "gcp-alantech",
+      "region": "europe-west2-a",
+      "vmType": "e2-medium"
+    }
+  ]
 }
