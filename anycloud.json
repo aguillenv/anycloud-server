@@ -15,7 +15,13 @@
       "vmType": "t2.micro",
       "minReplicas": 2,
       "maxReplicas": 3
+    },
+    {
+      "credentialsName": "azure-alantech",
+      "region": "westeurope",
+      "vmType": "Standard_B1ls",
+      "minReplicas": 3,
+      "maxReplicas": null
     }
-
   ]
 }
