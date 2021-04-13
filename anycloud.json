@@ -13,14 +13,14 @@
       "credentialsName": "aws-alantech",
       "region": "eu-west-1",
       "vmType": "t2.micro",
-      "minReplicas": 2,
+      "minReplicas": 1,
       "maxReplicas": 3
     },
     {
       "credentialsName": "azure-alantech",
       "region": "westeurope",
       "vmType": "Standard_B1ls",
-      "minReplicas": 3,
+      "minReplicas": 1,
       "maxReplicas": null
     }
   ]
