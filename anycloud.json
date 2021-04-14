@@ -4,7 +4,12 @@
       "credentialsName": "aws-alantech",
       "region": "eu-west-1",
       "vmType": "t2.micro"
-    } 
+    },
+    {
+      "credentialsName": "aws-alantech",
+      "region": "eu-west-2",
+      "vmType": "t2.micro"
+    }
     
   ],
   "multi-gcp-aws": [
