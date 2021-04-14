@@ -1,17 +1,20 @@
 {
   "single-gcp": [
     {
+      "credentialsName": "aws-alantech",
+      "region": "eu-west-1",
+      "vmType": "t2.micro"
+    }    
+
+  ],
+  "multi-gcp-azure": [
+        
+    {
       "credentialsName": "gcp-alantech",
       "region": "europe-west2-a",
       "vmType": "e2-medium"
     }
-  ],
-  "multi-aws-azure": [
-    {
-      "credentialsName": "aws-alantech",
-      "region": "eu-west-1",
-      "vmType": "t2.micro"
-    },
+    ,
     {
       "credentialsName": "azure-alantech",
       "region": "westeurope",
