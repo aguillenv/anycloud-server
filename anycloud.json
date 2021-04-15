@@ -6,18 +6,16 @@
       "vmType": "Standard_B1ls"
     }
   ],
+  "single-gcp": [{
+    "credentialsName": "gcp-alantech",
+    "region": "europe-west2-a",
+    "vmType": "e2-medium"
+  }],
   "multi-gcp-aws": [
     {
       "credentialsName": "aws-alantech",
       "region": "eu-west-1",
       "vmType": "t2.micro"
-    }
-    
-    ,
-    {
-      "credentialsName": "gcp-alantech",
-      "region": "europe-west2-a",
-      "vmType": "e2-medium"
     }
      
   ]
