@@ -12,7 +12,7 @@
     {
       "credentialsName": "azure-alantech",
       "region": "westeurope",
-      "vmType": "Standard_B1ls",
+      "vmType": "Standard_B4ms",
       "minReplicas": null,
       "maxReplicas": null
     }
