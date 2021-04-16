@@ -22,7 +22,7 @@
       "vmType": "t2.micro",
       "minReplicas": 2,
       "maxReplicas": null
-    },
+    }
   ],
   "single-gcp": [
     {
