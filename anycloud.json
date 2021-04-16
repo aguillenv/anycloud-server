@@ -1,4 +1,13 @@
 {
+  "single-az": [
+    {
+      "credentialsName": "azure-alantech",
+      "region": "westeurope",
+      "vmType": "Standard_B1s",
+      "minReplicas": null,
+      "maxReplicas": null
+    }
+  ],
   "multi-az-aws": [
     {
       "credentialsName": "aws-alantech",
@@ -15,21 +24,12 @@
       "maxReplicas": null
     }
   ],
-  "single-az": [
-    {
-      "credentialsName": "azure-alantech",
-      "region": "westeurope",
-      "vmType": "Standard_B1s",
-      "minReplicas": null,
-      "maxReplicas": null
-    }
-  ],
   "single-gcp": [
     {
       "credentialsName": "gcp-alantech",
       "region": "europe-west2-a",
       "vmType": "e2-medium",
-      "minReplicas": 3,
+      "minReplicas": 1,
       "maxReplicas": null
     }
   ]
