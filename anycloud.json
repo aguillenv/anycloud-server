@@ -1,14 +1,21 @@
 {
-
-  "single-aws": [
+  "multi-aws": [
     {
       "credentialsName": "aws-alantech",
       "region": "eu-west-1",
       "vmType": "t2.micro",
       "minReplicas": 2,
       "maxReplicas": null
+    },
+    {
+      "credentialsName": "aws-alantech",
+      "region": "eu-west-2",
+      "vmType": "t2.micro",
+      "minReplicas": 2,
+      "maxReplicas": null
     }
   ],
+  
   "single-gcp": [
     {
       "credentialsName": "gcp-alantech",
