@@ -3,7 +3,7 @@
     {
       "credentialsName": "aws-alantech",
       "region": "eu-west-1",
-      "vmType": "t2.micro",
+      "vmType": "t3.medium",
       "minReplicas": 2,
       "maxReplicas": null
     }
