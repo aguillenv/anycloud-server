@@ -2,18 +2,20 @@
   "single-gcp": [
     {
       "credentialsName": "gcp-alantech",
-      "minReplicas": 2
-    }
-  ],
-  "single-aws": [
-    {
-      "credentialsName": "aws-alantech",
+      "vmType": "e2-medium",
       "minReplicas": 1
     }
   ],
   "single-az": [
     {
       "credentialsName": "azure-alantech",
+      "minReplicas": 1
+    }
+  ],
+  "single-aws": [
+    {
+      "credentialsName": "aws-alantech",
+      "region": "eu-west-1",
       "minReplicas": 1
     }
   ]
