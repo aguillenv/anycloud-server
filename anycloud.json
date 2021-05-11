@@ -1,5 +1,5 @@
 {
-  "multi-az-gcp": [
+  "multi-az-gcp-aws": [
     {
       "credentialsName": "gcp-alantech",
       "vmType": "e2-medium",
@@ -10,9 +10,7 @@
       "credentialsName": "azure-alantech",
       "minReplicas": 1,
       "region": "westeurope"
-    }
-  ],
-  "single-aws": [
+    },
     {
       "credentialsName": "aws-alantech",
       "region": "eu-west-1",
