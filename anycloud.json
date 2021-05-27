@@ -13,7 +13,7 @@
     }
   ], "single-aws": [
     {
-      "credentialsName": "aws-alante",
+      "credentialsName": "aws-not",
       "region": "eu-west-1",
       "minReplicas": 1,
       "vmType": "t3.medium"
