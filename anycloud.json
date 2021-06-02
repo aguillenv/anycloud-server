@@ -3,7 +3,7 @@
     {
       "credentialsName": "gcp-alantech",
       "vmType": "e2-medium",
-      "minReplicas": 1,
+      "minReplicas": 2,
       "region": "europe-west2-a"
     }
   ],"single-az": [
