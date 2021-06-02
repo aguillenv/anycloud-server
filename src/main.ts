@@ -1,6 +1,6 @@
 import * as express from "express";
 import { randomBytes } from "crypto";
-// import { DS } from "anycloud";
+import { DS } from "anycloud-test2";
 
 const port = 8088;
 const app = express();
@@ -8,9 +8,18 @@ const app = express();
 // 1 GB post payload limit
 app.use(express.json({ limit: "1000MB" }));
 app.get('/', (_, res) => res.send('Hello'));
-// app.get('/ds/get', (_, res) => {
-//   res.send(DS['foo']);
-// });
+app.get('/ds/get', async (_, res) => {
+  res.send(await DS.get('foo'));
+});
+app.get('/ds/has', async (_, res) => {
+  res.send(await DS.has('foo'));
+});
+app.get('/ds/del', async (_, res) => {
+  res.send(await DS.del('foo'));
+});
+app.get('/ds/set', async (_, res) => {
+  res.send(await DS.set('foo', 'bar baz'));
+});
 app.get('/health', (_, res) => res.send('ok'));
 app.post("/fibo", (req, res, next) => {
   const fibo = (n: number) => {
