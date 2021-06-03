@@ -8,17 +8,22 @@ const app = express();
 // 1 GB post payload limit
 app.use(express.json({ limit: "1000MB" }));
 app.get('/', (_, res) => res.send('Hello'));
-app.get('/ds/get', async (_, res) => {
-  res.send(await DS.get('foo'));
+app.get('/ds/get/:key', async (req, res) => {
+  const key = req.params.key;
+  res.send(await DS.get(key));
 });
-app.get('/ds/has', async (_, res) => {
-  res.send(await DS.has('foo'));
+app.get('/ds/has/:key', async (req, res) => {
+  const key = req.params.key;
+  res.send(await DS.has(key));
 });
-app.get('/ds/del', async (_, res) => {
-  res.send(await DS.del('foo'));
+app.get('/ds/del/:key', async (req, res) => {
+  const key = req.params.key;
+  res.send(await DS.del(key));
 });
-app.get('/ds/set', async (_, res) => {
-  res.send(await DS.set('foo', 'bar baz'));
+app.post('/ds/set/:key', async (req, res) => {
+  const key = req.params.key;
+  const val = req.body;
+  res.send(await DS.set(key, val));
 });
 app.get('/health', (_, res) => res.send('ok'));
 app.post("/fibo", (req, res, next) => {
