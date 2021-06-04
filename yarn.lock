@@ -87,10 +87,10 @@ accepts@~1.3.7:
     mime-types "~2.1.24"
     negotiator "0.6.2"
 
-anycloud16@0.1.41:
+anycloud17@0.1.41:
   version "0.1.41"
-  resolved "https://registry.yarnpkg.com/anycloud16/-/anycloud16-0.1.41.tgz#657ff4ff17020abc44447af051d30b98838ff0da"
-  integrity sha512-eAR4Rq48idrJ5B97NohVlBPUdEO9kensJaazR/0XPsaZumV+iG5AE573GY3aPqfj1FhhHtLG2z52hSmMgbOuFA==
+  resolved "https://registry.yarnpkg.com/anycloud17/-/anycloud17-0.1.41.tgz#7894947a3bd5ea7154ae8932e0c33eaf410760c8"
+  integrity sha512-ctz309z5pMyBZAGsWn/uDl/Nu6TQN0rB+R//Nz6RgLRJw4xYJWIcDoBKs8tnQdxnUYZinbWJH/tCHvtHQmoelg==
   dependencies:
     "@types/node" "^14.14.28"
     node-fetch "^2.6.1"
