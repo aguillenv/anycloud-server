@@ -1,6 +1,6 @@
 import * as express from "express";
 import { randomBytes } from "crypto";
-import DS from "anycloud17";
+import { DS } from "anycloud21";
 
 const port = 8088;
 const app = express();
