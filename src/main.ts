@@ -1,6 +1,6 @@
 import * as express from "express";
 import { randomBytes } from "crypto";
-import { DS } from "anycloud25";
+import { ds, datastore } from "anycloud26";
 
 const port = 8088;
 const app = express();
@@ -10,17 +10,29 @@ app.use(express.json({ limit: "1000MB" }));
 app.get('/', (_, res) => res.send('Hello'));
 app.get('/ds/get/:key', async (req, res) => {
   const key = req.params.key;
-  res.send(await DS[key]);
+  res.send(await ds[key]);
 });
 app.get('/ds/del/:key', async (req, res) => {
   const key = req.params.key;
-  res.send(delete DS[key]);
+  res.send(delete ds[key]);
 });
 app.post('/ds/set/:key', async (req, res) => {
   const key = req.params.key;
   const val = req.body;
-  console.log(val);
-  res.send(DS[key] = val);
+  res.send(ds[key] = val);
+});
+app.get('/dscls/get/:key', async (req, res) => {
+  const key = req.params.key;
+  res.send(await datastore.get(key));
+});
+app.get('/dscls/del/:key', async (req, res) => {
+  const key = req.params.key;
+  res.send(await datastore.del(key));
+});
+app.post('/dscls/set/:key', async (req, res) => {
+  const key = req.params.key;
+  const val = req.body;
+  res.send(await datastore.set(key, val));
 });
 app.get('/health', (_, res) => res.send('ok'));
 app.post("/fibo", (req, res, next) => {
