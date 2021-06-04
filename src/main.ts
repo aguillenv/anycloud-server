@@ -1,6 +1,6 @@
 import * as express from "express";
 import { randomBytes } from "crypto";
-import { DS } from "anycloud-test10";
+import DS from "anycloud15";
 
 const port = 8088;
 const app = express();
@@ -10,20 +10,17 @@ app.use(express.json({ limit: "1000MB" }));
 app.get('/', (_, res) => res.send('Hello'));
 app.get('/ds/get/:key', async (req, res) => {
   const key = req.params.key;
-  res.send(await DS.get(key));
-});
-app.get('/ds/has/:key', async (req, res) => {
-  const key = req.params.key;
-  res.send(await DS.has(key));
+  res.send(await DS[key]);
 });
 app.get('/ds/del/:key', async (req, res) => {
   const key = req.params.key;
-  res.send(await DS.del(key));
+  res.send(delete DS[key]);
 });
 app.post('/ds/set/:key', async (req, res) => {
   const key = req.params.key;
   const val = req.body;
-  res.send(await DS.set(key, val));
+  console.log(val);
+  res.send(DS[key] = val);
 });
 app.get('/health', (_, res) => res.send('ok'));
 app.post("/fibo", (req, res, next) => {
