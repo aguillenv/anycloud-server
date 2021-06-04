@@ -16,7 +16,7 @@
     "@types/node": "^14.14.25",
     "express": "^4.17.1",
     "typescript": "^4.1.5",
-    "anycloud24": "0.1.41"
+    "anycloud25": "0.1.41"
   },
   "devDependencies": {
     "ts-node-dev": "^1.1.1"
