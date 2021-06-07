@@ -1,8 +1,8 @@
 import * as express from "express";
 import { randomBytes } from "crypto";
-import { ds, datastore } from "anycloud26";
+import { ds, datastore, PORT } from "anycloud34";
 
-const port = 8088;
+const port = PORT;
 const app = express();
 
 // 1 GB post payload limit
