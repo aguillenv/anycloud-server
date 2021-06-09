@@ -27,10 +27,11 @@ jobs:
     - name: Deploy
       env:
         CREDENTIALS_NAME: ${{ secrets.CREDENTIALS_NAME }}
-        CLOUD_NAME: ${{ secrets.CLOUD_NAME }}
+        CLOUD_NAME: AWS
         AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
         AWS_SECRET: ${{ secrets.AWS_SECRET }}
       run: |
         echo $CREDENTIALS_NAME
         echo $CLOUD_NAME
+        ./anycloud --version
         ALAN_TECH_ENV=staging ./anycloud new -n -c single-aws -a ci-deploy
