@@ -19,6 +19,7 @@ jobs:
     # - name: Install AnyCloud
     #   run: npm install -g anycloud
 
+    # Development only
     - name: Install Anycloud
       run: |
         curl -fOL https://github.com/alantech/alan/releases/download/v0.1.42-beta19/anycloud-ubuntu.tar.gz
@@ -32,5 +33,4 @@ jobs:
         AWS_SECRET: ${{ secrets.AWS_SECRET }}
         GITHUB_TOKEN: ${{ secrets.AUTH_TOKEN }}
       run: |
-        ./anycloud --version
         ALAN_TECH_ENV=staging ./anycloud new -n -c single-aws -a ci-deploy
