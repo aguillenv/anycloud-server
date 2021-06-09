@@ -23,7 +23,6 @@ jobs:
       run: |
         curl -fOL https://github.com/alantech/alan/releases/download/v0.1.42-beta17/anycloud-ubuntu.tar.gz
         tar -xzf anycloud-ubuntu.tar.gz
-        export PATH=$PATH:$PWD/anycloud
 
     - name: Deploy
       env:
@@ -32,7 +31,4 @@ jobs:
         AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
         AWS_SECRET: ${{ secrets.AWS_SECRET }}
       run: |
-        ls
-        export PATH=$PATH:$PWD/anycloud
-        echo $PATH
-        anycloud new --non-interactive -c single-aws -a ci-deploy
+        ./anycloud new --non-interactive -c single-aws -a ci-deploy
