@@ -23,6 +23,7 @@ jobs:
       run: |
         curl -fOL https://github.com/alantech/alan/releases/download/v0.1.42-beta17/anycloud-ubuntu.tar.gz
         tar -xzf anycloud-ubuntu.tar.gz
+        mv anycloud /usr/local/bin/anycloud
 
     - name: Deploy
       env:
