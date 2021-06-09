@@ -26,8 +26,8 @@ jobs:
 
     - name: Deploy
       env:
-        CREDENTIALS_NAME=${{ secrets.CREDENTIALS_NAME }}
-        CLOUD_NAME=${{ secrets.CLOUD_NAME }}
-        AWS_ACCESS_KEY=${{ secrets.AWS_ACCESS_KEY }}
-        AWS_SECRET=${{ secrets.AWS_SECRET }}
+        CREDENTIALS_NAME: ${{ secrets.CREDENTIALS_NAME }}
+        CLOUD_NAME: ${{ secrets.CLOUD_NAME }}
+        AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+        AWS_SECRET: ${{ secrets.AWS_SECRET }}
       run: anycloud new --non-interactive -c single-aws -a ci-deploy
