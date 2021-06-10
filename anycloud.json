@@ -3,20 +3,22 @@
     {
       "credentialsName": "gcp-alantech",
       "minReplicas": 1,
-      "region": "europe-west2-a"
+      "region": "europe-west2-a",
+      "vmType": "f1-micro"
     }
   ],"single-az": [
     {
       "credentialsName": "azure-alantech",
       "minReplicas": 1,
-      "region": "westeurope"
+      "region": "westeurope",
+      "vmType": "Standard_B1s"
     }
   ], "single-aws": [
     {
       "credentialsName": "aws-alantech",
       "region": "eu-west-1",
       "minReplicas": 2,
-      "vmType": "t3.medium"
+      "vmType": "t2.micro"
     }
   ]
 }
