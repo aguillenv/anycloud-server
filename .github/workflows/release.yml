@@ -22,7 +22,7 @@ jobs:
     # Development only
     - name: Install Anycloud
       run: |
-        curl -fOL https://github.com/alantech/alan/releases/download/v0.1.42-beta28/anycloud-ubuntu.tar.gz
+        curl -fOL https://github.com/alantech/alan/releases/download/v0.1.42-beta29/anycloud-ubuntu.tar.gz
         tar -xzf anycloud-ubuntu.tar.gz
 
     - name: Deploy
