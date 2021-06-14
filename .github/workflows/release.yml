@@ -32,5 +32,5 @@ jobs:
         AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
         AWS_SECRET: ${{ secrets.AWS_SECRET }}
         AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
-      run: |
-        ALAN_TECH_ENV=staging ./anycloud new -n -c single-aws -a ci-deploy
+        ALAN_TECH_ENV: staging
+      run: ./anycloud new -n -c single-aws -a ci-deploy
