@@ -6,26 +6,21 @@
       "region": "europe-west2-a",
       "vmType": "f1-micro"
     }
-  ],"single-az": [
+  ],
+  "single-az": [
     {
       "credentialsName": "azure-alantech",
       "minReplicas": 1,
       "region": "westeurope",
       "vmType": "Standard_B1s"
     }
-  ], "single-aws": [
+  ],
+  "single-aws": [
     {
       "credentialsName": "aws-alantech",
       "region": "eu-west-1",
       "minReplicas": 1,
       "vmType": "t2.micro"
-    }
-  ], "fix-gcp": [
-    {
-      "credentialsName": "fix-test",
-      "minReplicas": 1,
-      "region": "europe-west2-a",
-      "vmType": "f1-micro"
     }
   ]
 }
