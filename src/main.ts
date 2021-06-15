@@ -8,7 +8,7 @@ const app = express();
 
 // 1 GB post payload limit
 app.use(express.json({ limit: "1000MB" }));
-app.get('/', (_, res) => res.send('Hello'));
+app.get('/', (_, res) => res.send('Hello upgrade'));
 // app.get('/ds/get/:key', async (req, res) => {
 //   const key = req.params.key;
 //   res.send(await ds[key]);
