@@ -25,7 +25,7 @@ jobs:
         curl -fOL https://github.com/alantech/alan/releases/download/v0.1.42-beta34/anycloud-ubuntu.tar.gz
         tar -xzf anycloud-ubuntu.tar.gz
 
-    - name: Deploy
+    - name: Deploy AWS
       env:
         CREDENTIALS_NAME: ${{ secrets.CREDENTIALS_NAME }}
         CLOUD_NAME: ${{ secrets.CLOUD_NAME }}
@@ -33,4 +33,27 @@ jobs:
         AWS_SECRET: ${{ secrets.AWS_SECRET }}
         AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
         ALAN_TECH_ENV: staging
-      run: ./anycloud new -n -c single-aws -a ci-deploy
+      run: ./anycloud new -n -c single-aws -a ci-deploy-aws
+
+    - name: Deploy GCP
+      env:
+        CREDENTIALS_NAME: ${{ secrets.GCP_CREDENTIALS_NAME }}
+        CLOUD_NAME: ${{ secrets.GCP_CLOUD_NAME }}
+        AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+        GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+        GCP_CLIENT_EMAIL: ${{ secrets.GCP_CLIENT_EMAIL }}
+        GCP_PRIVATE_KEY: ${{ secrets.GCP_PRIVATE_KEY }}
+        ALAN_TECH_ENV: staging
+      run: ./anycloud new -n -c single-gcp -a ci-deploy-gcp
+
+    - name: Deploy Azure
+      env:
+        CREDENTIALS_NAME: ${{ secrets.AZ_CREDENTIALS_NAME }}
+        CLOUD_NAME: ${{ secrets.AZ_CLOUD_NAME }}
+        AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+        AZ_APP_ID: ${{ secrets.AZ_APP_ID }}
+        AZ_DIRECTORY_ID: ${{ secrets.AZ_DIRECTORY_ID }}
+        AZ_SUBSCRIPTION_ID: ${{ secrets.AZ_SUBSCRIPTION_ID }}
+        AZ_SECRET: ${{ secrets.AZ_SECRET }}
+        ALAN_TECH_ENV: staging
+      run: ./anycloud new -n -c single-az -a ci-deploy-az
