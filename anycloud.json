@@ -20,5 +20,12 @@
       "minReplicas": 1,
       "vmType": "t2.micro"
     }
+  ], "fix-gcp": [
+    {
+      "credentialsName": "fix-test",
+      "minReplicas": 1,
+      "region": "europe-west2-a",
+      "vmType": "f1-micro"
+    }
   ]
 }
