@@ -22,5 +22,13 @@
       "minReplicas": 1,
       "vmType": "t2.micro"
     }
+  ],
+  "another-aws": [
+    {
+      "credentialsName": "aws-alantech",
+      "region": "eu-west-1",
+      "minReplicas": 1,
+      "vmType": "t2.micro"
+    }
   ]
 }
