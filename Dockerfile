@@ -6,5 +6,5 @@ ENV PORT 8088
 COPY . .
 
 RUN yarn
-RUN yarn build
+RUN yarn buil
 CMD yarn start
