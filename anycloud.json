@@ -4,7 +4,7 @@
       "credentialsName": "gcp-alantech",
       "minReplicas": 1,
       "region": "europe-west2-a",
-      "vmType": "f1-micro"
+      "vmType": "e2-micro"
     }
   ],
   "single-az": [
