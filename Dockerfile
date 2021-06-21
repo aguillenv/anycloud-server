@@ -1,4 +1,4 @@
-FROM node:lts
+FROM node:lt
 
 ENV LOAD_TEST false
 ENV PORT 8088
