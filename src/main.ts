@@ -1,40 +1,39 @@
 import * as express from "express";
 import { randomBytes } from "crypto";
-// import { ds, datastore, PORT } from "anycloud";
+import { ds, datastore, PORT } from "anycloud";
 
-// const port = PORT;
-const port = 8088;
+const port = PORT;
 const app = express();
 
 // 1 GB post payload limit
 app.use(express.json({ limit: "1000MB" }));
 app.get('/', (_, res) => res.send('Hello upgrade'));
-// app.get('/ds/get/:key', async (req, res) => {
-//   const key = req.params.key;
-//   res.send(await ds[key]);
-// });
-// app.get('/ds/del/:key', async (req, res) => {
-//   const key = req.params.key;
-//   res.send(delete ds[key]);
-// });
-// app.post('/ds/set/:key', async (req, res) => {
-//   const key = req.params.key;
-//   const val = req.body;
-//   res.send(ds[key] = val);
-// });
-// app.get('/dscls/get/:key', async (req, res) => {
-//   const key = req.params.key;
-//   res.send(await datastore.get(key));
-// });
-// app.get('/dscls/del/:key', async (req, res) => {
-//   const key = req.params.key;
-//   res.send(await datastore.del(key));
-// });
-// app.post('/dscls/set/:key', async (req, res) => {
-//   const key = req.params.key;
-//   const val = req.body;
-//   res.send(await datastore.set(key, val));
-// });
+app.get('/ds/get/:key', async (req, res) => {
+  const key = req.params.key;
+  res.send(await ds[key]);
+});
+app.get('/ds/del/:key', async (req, res) => {
+  const key = req.params.key;
+  res.send(delete ds[key]);
+});
+app.post('/ds/set/:key', async (req, res) => {
+  const key = req.params.key;
+  const val = req.body;
+  res.send(ds[key] = val);
+});
+app.get('/dscls/get/:key', async (req, res) => {
+  const key = req.params.key;
+  res.send(await datastore.get(key));
+});
+app.get('/dscls/del/:key', async (req, res) => {
+  const key = req.params.key;
+  res.send(await datastore.del(key));
+});
+app.post('/dscls/set/:key', async (req, res) => {
+  const key = req.params.key;
+  const val = req.body;
+  res.send(await datastore.set(key, val));
+});
 app.get('/health', (_, res) => res.send('ok'));
 app.post("/fibo", (req, res, next) => {
   const fibo = (n: number) => {
